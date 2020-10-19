@@ -13,7 +13,9 @@ import './style/main.scss';
 function main() {
   ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
-      <App />
+      <App>
+        
+      </App>
     </Provider>
     , document.querySelector('.app-wrapper'));
 }

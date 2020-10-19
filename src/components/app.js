@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Component1 from "./pages/component1"; 
+
+import Introduction from "./pages/introduction"; 
+import Story from "./pages/story"; 
+import Contact from "./pages/contact";
+import Navbar from "./navbar/navbar";
 
 export default class App extends Component {
   render() {
     return (
       <div className='container'>
-        <Router>
-          <div>
-              <Switch>
-                <Route path="/component1" component={Component1} />
-              </Switch>
-          </div>
-        </Router>
-
+          <Router>
+            <div>
+              <Navbar>
+                  <Switch>
+                    <Route path="/" component={Introduction} />
+                    <Route path="/story" component={Story} />
+                    <Route path="/contact" component={Contact} />
+                  </Switch>
+                </Navbar>
+            </div>
+          </Router>
       </div>
     );
   }
