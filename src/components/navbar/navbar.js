@@ -4,16 +4,17 @@ import { NavLink } from 'react-router-dom';
 
 
 class Navbar extends Component {
+
     render() {
         return (
             <div className='navbar'>
                 <NavLink exact to='/' activeClassName='nav-link-active'>
                     Introduction
                 </NavLink>
-                <NavLink exact to='/story' activeClassName='nav-link-active'>
+                <NavLink to='/story' activeClassName='nav-link-active'>
                     Story
                 </NavLink>
-                <NavLink exact to='/contact' activeClassName='nav-link-active'>
+                <NavLink to='/contact' activeClassName='nav-link-active'>
                     Contact
                 </NavLink>
             </div>
