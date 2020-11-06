@@ -1,6 +1,36 @@
 .navbar {
-    background-color: #333;
+    justify-content: center;
+    align-items: center;
     display: flex;
-    padding: 16px;
+    height: 51px;
+    border-bottom: 5px solid $purple-2;
     
+    .navbar-links {
+        display: flex;
+        width: 500px;
+        justify-content: space-evenly;
+
+
+        .nav-link-wrapper {
+            a {
+                color: $blue-4;
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: 600;
+                border-bottom: 1px solid transparent;
+                transition: 0.5s ease-in-out;
+                
+                &:hover {
+                    color: $blue-4;
+                    border-bottom: 1px solid $blue-4;
+                    transition: 0.5s ease-in-out;
+                }
+            }
+
+            .nav-link-active {
+                color: $blue-4;
+                border-bottom: 1px solid $blue-4;
+            }
+        }
+    }
 }

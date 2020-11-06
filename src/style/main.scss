@@ -1,3 +1,9 @@
+@import 'colors';
+@import 'navbar';
+@import 'introduction';
+@import 'story';
+@import 'contact';
+
 *,
 *::after,
 *::before {
@@ -6,7 +12,7 @@
     box-sizing: inherit;
 }
 
-@import 'navbar';
-@import 'introduction';
-@import 'story';
-@import 'contact';
+.container {
+    background-color: $blue-1;
+    height: 100vh;
+}

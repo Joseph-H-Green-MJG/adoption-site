@@ -8,15 +8,23 @@ class Navbar extends Component {
     render() {
         return (
             <div className='navbar'>
-                <NavLink exact to='/' activeClassName='nav-link-active'>
-                    Introduction
-                </NavLink>
-                <NavLink to='/story' activeClassName='nav-link-active'>
-                    Story
-                </NavLink>
-                <NavLink to='/contact' activeClassName='nav-link-active'>
-                    Contact
-                </NavLink>
+                <div className='navbar-links'>
+                    <div className='nav-link-wrapper'>
+                        <NavLink exact to='/' activeClassName='nav-link-active'>
+                            Introduction
+                        </NavLink>
+                    </div>
+                    <div className='nav-link-wrapper'>
+                        <NavLink to='/story' activeClassName='nav-link-active'>
+                            Story
+                        </NavLink>
+                    </div>
+                    <div className='nav-link-wrapper'>
+                        <NavLink to='/contact' activeClassName='nav-link-active'>
+                            Contact
+                        </NavLink>
+                    </div>
+                </div>
             </div>
         );
     }

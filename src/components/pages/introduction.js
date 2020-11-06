@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 class Introduction extends Component {
     render() {
         return (
-            <div className='intorduction'>
-                <h1>Introduction</h1>
+            <div className='introduction'>
+                <div className='banner-container'>
+                    <div className='page-banner'>Rains Portfolio</div>
+                </div>
             </div>
         );
     }
