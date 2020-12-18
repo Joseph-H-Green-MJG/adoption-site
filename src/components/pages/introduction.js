@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Contact from '../pages/contact';
+
 
 class Introduction extends Component {
     constructor() {
@@ -28,6 +30,7 @@ class Introduction extends Component {
                 <div className='test-photo'>
                     <div className='gradient'></div>
                 </div>
+                <Contact/>
             </div>
         );
     }
