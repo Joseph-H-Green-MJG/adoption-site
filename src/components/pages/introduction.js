@@ -30,7 +30,7 @@ class Introduction extends Component {
                 <div className='test-photo'>
                     <div className='gradient'></div>
                 </div>
-                <Contact/>
+                <Contact className='contact__form'/>
             </div>
         );
     }

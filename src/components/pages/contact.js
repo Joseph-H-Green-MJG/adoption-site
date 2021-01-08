@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 class Contact extends Component {
     constructor(props) {
         super();
+        
         this.state = {
             email: '',
             name: '',
@@ -15,8 +16,9 @@ class Contact extends Component {
     }
 
     handleChange(event) {
-        console.log(event.target.value);
-        this.setState({inputName: event.target.value});
+        this.setState({
+            [event.target.name]: event.target.value
+        });
     }
 
     handleSubmit(event) {
@@ -26,16 +28,41 @@ class Contact extends Component {
     }
 
     render() {
+        const { className} = this.props;
         return (
-            <div>
-                <h1>Contact Us</h1>
-                <div className='contact-form'>
-                    <input type='email' placeholder='Email' />
-                    <input type='name' placeholder='Name' />
-                    <textarea value={this.state.body} onChange={this.handleChange} placeholder="Write message here" />
-                    <button onClick={this.handleSubmit}>Submit</button>
-                </div>
-            </div>
+                <form className={`${className} contact-form`}>
+                    <div className='contact-form__header'>
+                        <h1>Contact Us</h1>
+                    </div>
+                    <input
+                      className='contact-form__email'
+                      type='text'
+                      title='Email'
+                      name='email'
+                      onChange={this.handleChange}
+                      placeholder='Email'
+                    />
+
+                    <input
+                      className='contact-form__name'
+                      type='text'
+                      title='Name'
+                      name='name'
+                      onChange={this.handleChange}
+                      placeholder='Name'
+                    />
+
+                    <textarea
+                      className='contact-form__body'
+                      value={this.state.body}
+                      title='Body'
+                      name='body'
+                      onChange={this.handleChange}
+                      placeholder="Write message here"
+                    />
+
+                    <button onClick={this.handleSubmit} className='contact-form__submit'>Send</button>
+                </form>
         );
     }
 }
